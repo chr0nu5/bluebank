@@ -1,0 +1,29 @@
+{
+  "name": "bluebank",
+  "version": "1.0.0",
+  "description": "Bank Transactions",
+  "main": "app.js",
+  "scripts": {
+    "test": "find spec -name \"*.js\" | xargs node_modules/.bin/mocha",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chr0nu5/bluebank.git"
+  },
+  "author": "Jonathan Querubina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chr0nu5/bluebank/issues"
+  },
+  "homepage": "https://github.com/chr0nu5/bluebank#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "consolidate": "^0.14.5",
+    "express": "^4.14.0",
+    "pg": "^4.5.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.27.0",
+    "swig": "^1.4.2"
+  }
+}

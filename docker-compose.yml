@@ -1,0 +1,18 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    volumes:
+     - ./controllers:/app/controllers
+     - ./models:/app/models
+     - ./public:/app/public
+     - ./views:/app/views
+    ports:
+      - "3000:3000"
+    links:
+      - db
