@@ -15,9 +15,12 @@ app
         extended: true
     }))
     .use(bodyParser.json())
-    .use(express.static(__dirname + '/public'))
     .engine('html', consolidate.swig)
     .enable('trust proxy');
+
+// routes
+app
+    .get('/', PageController.index);
 
 // run
 app.listen(3000);

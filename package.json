@@ -19,11 +19,18 @@
   "homepage": "https://github.com/chr0nu5/bluebank#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
     "consolidate": "^0.14.5",
+    "coveralls": "^2.11.15",
     "express": "^4.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nyc": "^10.0.0",
     "pg": "^4.5.3",
     "pg-hstore": "^2.3.2",
+    "proxyquire": "^1.7.10",
     "sequelize": "^3.27.0",
+    "sinon": "^1.17.6",
     "swig": "^1.4.2"
   }
 }

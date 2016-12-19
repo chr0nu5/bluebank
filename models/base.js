@@ -13,7 +13,7 @@ var models = new Sequelize('bluebank', 'postgres', '', {
     }
 });
 
-var Account = models.define('users', {
+var Account = models.define('account', {
     id: {
         field: 'id',
         type: Sequelize.INTEGER,
