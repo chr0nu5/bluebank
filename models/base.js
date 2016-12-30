@@ -44,6 +44,14 @@ var Transaction = models.define('transaction', {
     value: {
         field: 'value',
         type: Sequelize.DOUBLE
+    },
+    to: {
+        type: Sequelize.INTEGER,
+        references: {
+            model: Account,
+            key: 'id',
+            deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+        }
     }
 });
 
@@ -51,7 +59,7 @@ Account.hasMany(Transaction);
 Transaction.belongsTo(Account);
 
 models.sync({
-    force: process.env.DB_FORCE ? process.env.DB_FORCE : true
+    force: process.env.DB_FORCE ? process.env.DB_FORCE : false
 });
 
 module.exports = {

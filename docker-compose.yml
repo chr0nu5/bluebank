@@ -8,10 +8,8 @@ services:
   web:
     build: .
     volumes:
-     - ./controllers:/app/controllers
-     - ./models:/app/models
-     - ./public:/app/public
-     - ./views:/app/views
+     - .:/app
+     - /app/node_modules
     ports:
       - "3000:3000"
     links:

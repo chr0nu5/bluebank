@@ -10,6 +10,7 @@ var PageController = require('./controllers/page_controller');
 var app = express();
 app
     .set('views', __dirname + '/views')
+    .use(express.static(__dirname + '/public'))
     .set('view engine', 'ejs')
     .use(bodyParser.urlencoded({
         extended: true
@@ -20,7 +21,10 @@ app
 
 // routes
 app
-    .get('/', PageController.index);
+    .get('/', PageController.index)
+    .post('/account/create', PageController.account_create)
+    .get('/transactions', PageController.transactions)
+    .post('/transaction/create', PageController.transaction_create);
 
 // run
 app.listen(3000);
