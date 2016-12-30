@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 
-var models = new Sequelize('bluebank', 'postgres', '', {
+var models = new Sequelize(process.env.DB ? process.env.DB : 'bluebank', 'postgres', '', {
     host: 'db',
     dialect: 'postgres',
     logging: (log) => {

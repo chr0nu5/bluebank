@@ -1,0 +1,1 @@
+DB=bluebank_tests npm test

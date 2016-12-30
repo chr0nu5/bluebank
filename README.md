@@ -5,15 +5,17 @@ Node.js implementation
 
 # SETUP
 
+```docker-compose build web```
 ```docker-compose start db```
-```docker exec -it bluebank_db_1 bash```
+```docker exec -it bluebank_db_1 psql -U postgres```
 ```create database bluebank;```
-```docker-compose up web```
+```create database bluebank_tests;```
 
 # RUN
 
-TODO
+```docker-compose up web```
 
 # TESTS
 
-TODO
+```docker-compose start db```
+```docker-compose run web sh tests```
